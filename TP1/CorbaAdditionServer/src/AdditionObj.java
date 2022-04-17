@@ -4,7 +4,7 @@ package CorbaAdditionServer.src;
  *
  * @author imed
  */
-import CorbaAdditionServer.src.AdditionApp.*;
+import AdditionApp.*;
 import org.omg.CosNaming.*;
 import org.omg.CosNaming.NamingContextPackage.*;
 import org.omg.CORBA.*;

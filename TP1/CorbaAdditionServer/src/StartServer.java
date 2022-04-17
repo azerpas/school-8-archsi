@@ -4,7 +4,7 @@ package CorbaAdditionServer.src;
  *
  * @author imed
  */
-import CorbaAdditionServer.src.AdditionApp.*;
+import AdditionApp.*;
     
 import org.omg.CosNaming.*;
 import org.omg.CosNaming.NamingContextPackage.*;
@@ -12,6 +12,7 @@ import org.omg.CORBA.*;
 import org.omg.PortableServer.*;
 import org.omg.PortableServer.POA;
 import java.util.Properties;
+import AdditionApp.AdditionPOATie;
     
 public class StartServer {
     
@@ -25,6 +26,7 @@ public class StartServer {
         // create servant and register it with the ORB
         AdditionObj addobj = new AdditionObj();
         addobj.setORB(orb); 
+        AdditionPOATie addTie = new  AdditionPOATie(addobj););
     
         // get object reference from the servant
         org.omg.CORBA.Object ref = rootpoa.servant_to_reference(addobj);
