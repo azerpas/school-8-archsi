@@ -26,7 +26,7 @@ public class StartServer {
         // create servant and register it with the ORB
         AdditionObj addobj = new AdditionObj();
         addobj.setORB(orb); 
-        AdditionPOATie addTie = new  AdditionPOATie(addobj););
+        AdditionPOATie addTie = new  AdditionPOATie(addobj);
     
         // get object reference from the servant
         org.omg.CORBA.Object ref = rootpoa.servant_to_reference(addobj);
