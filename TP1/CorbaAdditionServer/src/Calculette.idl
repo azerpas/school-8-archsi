@@ -1,0 +1,22 @@
+module Calculette
+{
+  interface Addition
+  {
+    long add(in long a,in long b);
+
+    };
+  interface Soustraction
+  {
+    long sous (in long a,in long b);
+    };
+  interface Multiplication 
+  {
+    long mult(in long a,in long b);
+    };
+	
+  exception DivisionParZero {};
+  interface Division 
+  {
+    long div (in long a,in long b) raises (DivisionParZero);
+    };
+};
