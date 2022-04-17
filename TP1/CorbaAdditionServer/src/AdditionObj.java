@@ -1,5 +1,3 @@
-package CorbaAdditionServer.src;
-
 /**
  *
  * @author imed
