@@ -26,11 +26,20 @@ public class TwitterQueue {
 			connection = connectionFactory.createConnection();
 			Session session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 			Queue queue = session.createQueue("tweetQueue");
-			String payload = "New tweet";
-			Message msg = session.createTextMessage(payload);
+			
+			Tweet tweet1 = new Tweet();
+			tweet1.setContent("My first tweet !");
+			tweet1.setTimestamp(1490230840);
+			Tweet tweet2 = new Tweet();
+			tweet2.setContent("My second tweet !");
+			tweet2.setTimestamp(1490230840);
+			Message msg1 = session.createTextMessage(tweet1.toString());
+			Message msg2 = session.createTextMessage(tweet2.toString());
 			MessageProducer producer = session.createProducer(queue);
-			System.out.println("Sending tweet '" + payload + "'");
-			producer.send(msg);
+			System.out.println("Sending tweet '" + tweet1.toString() + "'");
+			producer.send(msg1);
+			System.out.println("Sending tweet '" + tweet2.toString() + "'");
+			producer.send(msg2);
 
 			MessageConsumer consumer = session.createConsumer(queue);
 			connection.start();
