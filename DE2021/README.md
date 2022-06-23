@@ -32,7 +32,32 @@
 ```
 ## 2. Proposez un schéma JSON validant votre fichier
 ```json
-// Pas au programme ?
+{
+  "type": "object",
+  "properties": {
+    "name": "string",
+    "baseUrl": "string",
+    "auth": "string",
+    "endpoints": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": [
+          "name": "string",
+          "method": "string",
+          "path": "string",
+          "authorisation": "string",
+          "parameters": [
+            "type": "array",
+            "items": {
+              "type": "object"
+            }
+          ]
+        ]
+      }
+    }
+  }
+}
 ```
 ## 3. Citez trois différences principales entre JSON vs XML
 ```json
