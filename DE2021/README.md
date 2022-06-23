@@ -81,9 +81,10 @@ Partie serveur
 - Utilise des files de message
 - Fournit une API
 ## 7. Combien existe-t-il de types de fonctionnement des MOM (Message-Oriented middleware)? Présentez chacun des types par un schéma simplifié. 
-```
-
-```
+#### Queue
+![queue](https://user-images.githubusercontent.com/19282069/175407541-332c7515-eec6-4ef8-8d27-4f3eae09e774.png)
+#### Topic
+![topic](https://user-images.githubusercontent.com/19282069/175407815-750b0384-43eb-4f37-a0a6-6c454c8ae7e5.png)
 ## 8. Quelle est la différence entre les modes push et pull?
 - Push: l'envoyeur envoie des messages au receveur. Attend ou échoue.
 - Pull: le receveur va chercher le message chez le client. Périodiquement. Block.
