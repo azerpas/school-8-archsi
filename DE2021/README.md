@@ -1,6 +1,34 @@
 ## 1. Proposer un fichier JSON décrivant une interface de service exposant plusieurs opérations. 
 ```json
-// Pas au programme ?
+{
+  "name": "My API",
+  "baseUrl": "https://thisapi.com",
+  "auth": "Bear",
+  "endpoints": [
+    {
+      "name": "Create key",
+      "method": "POST",
+      "path": "/key",
+      "authorisation": true,
+      "parameters": [
+        {
+          "type": "body"
+        }
+      ]
+    },
+    {
+      "name": "Get key",
+      "method": "GET",
+      "path": "/key/{id}",
+      "authorisation": false,
+      "parameters": [
+        {
+          "type": "path"
+        }
+      ]
+    },
+  ],
+}
 ```
 ## 2. Proposez un schéma JSON validant votre fichier
 ```json
